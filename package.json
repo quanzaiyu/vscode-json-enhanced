@@ -3,7 +3,7 @@
   "displayName": "Json Enhanced",
   "description": "All json features and json tools in one",
   "publisher": "quanzaiyu",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.51.0"
@@ -87,6 +87,6 @@
   },
   "dependencies": {
     "@types/jsonic": "^0.3.0",
-    "jsonic": "^1.0.1"
+    "jsonic": "^1.0.2"
   }
 }
