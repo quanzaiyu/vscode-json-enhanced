@@ -3,8 +3,8 @@ import { fix } from './_fixJSON';
 
 module.exports = function (context: ExtensionContext) {
   const decoration = window.createTextEditorDecorationType({
-    color: 'white',
-    backgroundColor: 'red'
+    color: 'pink',
+    backgroundColor: 'green'
   });
   context.subscriptions.push(decoration);
   context.subscriptions.push(

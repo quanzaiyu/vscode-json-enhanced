@@ -3,7 +3,7 @@
   "displayName": "Json Enhanced",
   "description": "All json features and json tools in one",
   "publisher": "quanzaiyu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.51.0"
@@ -61,6 +61,10 @@
     ]
   },
   "scripts": {
+    "push": "node push.js",
+    "build": "yarn compile && vsce package -o vscode-json-enhanced.vsix",
+    "ext": "yarn compile && code --install-extension vscode-json-enhanced.vsix",
+    "publish": "vsce publish",
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "lint": "eslint src --ext ts",
