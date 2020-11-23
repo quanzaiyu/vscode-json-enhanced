@@ -9,6 +9,11 @@
 ## Features
 
 - Fix JSON
+- Uglify JSON
+- Beautify JSON
+- Escape JSON
+- Unescape JSON
+- Validate JSON
 
 ## Supported languages
 
@@ -41,6 +46,27 @@
 2. Run the command named `Beautify JSON`.
 
 ![](./doc/images/004.gif)
+
+### **Escape JSON**
+
+1. Open a json file.
+2. Run the command named `Escape JSON`.
+
+![](./doc/images/005.gif)
+
+### **Unescape JSON**
+
+1. Open a json file.
+2. Run the command named `Unescape JSON`.
+
+![](./doc/images/006.gif)
+
+### **Validate JSON**
+
+1. Open a json file.
+2. Run the command named `Validate JSON`.
+
+![](./doc/images/007.gif)
 
 ## Shortcuts
 

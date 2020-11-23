@@ -27,6 +27,9 @@
   ],
   "activationEvents": [
     "onCommand:vscode-json-enhanced.fixJSON",
+    "onCommand:vscode-json-enhanced.validateJson",
+    "onCommand:vscode-json-enhanced.escapeJson",
+    "onCommand:vscode-json-enhanced.unescapeJson",
     "onCommand:vscode-json-enhanced.uglifyJson",
     "onCommand:vscode-json-enhanced.beautifyJson"
   ],
@@ -39,6 +42,11 @@
         "category": "Json Enhanced"
       },
       {
+        "command": "vscode-json-enhanced.validateJson",
+        "title": "Validate JSON",
+        "category": "Json Enhanced"
+      },
+      {
         "command": "vscode-json-enhanced.uglifyJson",
         "title": "Uglify JSON",
         "category": "Json Enhanced"
@@ -46,6 +54,16 @@
       {
         "command": "vscode-json-enhanced.beautifyJson",
         "title": "Beautify JSON",
+        "category": "Json Enhanced"
+      },
+      {
+        "command": "vscode-json-enhanced.escapeJson",
+        "title": "Escape JSON",
+        "category": "Json Enhanced"
+      },
+      {
+        "command": "vscode-json-enhanced.unescapeJson",
+        "title": "Unescape JSON",
         "category": "Json Enhanced"
       }
     ],
