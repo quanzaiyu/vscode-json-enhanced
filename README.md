@@ -34,7 +34,7 @@
 
 ## Supported settings
 
-### vscode-json-enhanced.fixJSON.indentationSpaces
+### vscode-json-enhanced.indentationSpaces
 
 ```
 Type: Number | Null

@@ -31,7 +31,7 @@ export const fix = (options: Options) => (
     : document.getText(selection);
 
   const indentation: number = Number(
-    workspace.getConfiguration("vscode-json-enhanced.fixJSON").get("indentationSpaces") ||
+    workspace.getConfiguration("vscode-json-enhanced").get("indentationSpaces") ||
     workspace.getConfiguration("editor").get("tabSize")
   );
   const result = fixText(text, { indentation });

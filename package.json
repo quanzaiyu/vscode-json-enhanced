@@ -26,7 +26,9 @@
     "format"
   ],
   "activationEvents": [
-    "onCommand:vscode-json-enhanced.fixJSON"
+    "onCommand:vscode-json-enhanced.fixJSON",
+    "onCommand:vscode-json-enhanced.uglifyJson",
+    "onCommand:vscode-json-enhanced.beautifyJson"
   ],
   "main": "./dist/main.js",
   "contributes": {
@@ -35,13 +37,23 @@
         "command": "vscode-json-enhanced.fixJSON",
         "title": "Fix JSON",
         "category": "Json Enhanced"
+      },
+      {
+        "command": "vscode-json-enhanced.uglifyJson",
+        "title": "Uglify JSON",
+        "category": "Json Enhanced"
+      },
+      {
+        "command": "vscode-json-enhanced.beautifyJson",
+        "title": "Beautify JSON",
+        "category": "Json Enhanced"
       }
     ],
     "configuration": {
       "type": "object",
       "title": "JSON",
       "properties": {
-        "vscode-json-enhanced.fixJSON.indentationSpaces": {
+        "vscode-json-enhanced.indentationSpaces": {
           "type": [
             "number",
             "null"
@@ -87,6 +99,7 @@
   },
   "dependencies": {
     "@types/jsonic": "^0.3.0",
+    "json-bigint": "^1.0.0",
     "jsonic": "^1.0.1"
   }
 }
