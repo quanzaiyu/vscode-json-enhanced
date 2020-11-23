@@ -28,9 +28,23 @@
 
 ![](./doc/images/002.gif)
 
+### **Uglify JSON**
+
+1. Open a json file.
+2. Run the command named `Uglify JSON`.
+
+![](./doc/images/003.gif)
+
+### **Beautify JSON**
+
+1. Open a json file.
+2. Run the command named `Beautify JSON`.
+
+![](./doc/images/004.gif)
+
 ## Shortcuts
 
-- `Fix JSON`: `Ctrl + Alt + F`
+- Fix JSON: `Ctrl + Alt + F`
 
 ## Supported settings
 
