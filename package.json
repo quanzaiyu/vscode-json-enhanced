@@ -26,6 +26,7 @@
     "format"
   ],
   "activationEvents": [
+    "onLanguage:json",
     "onCommand:vscode-json-enhanced.fixJSON",
     "onCommand:vscode-json-enhanced.validateJson",
     "onCommand:vscode-json-enhanced.escapeJson",

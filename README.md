@@ -1,5 +1,9 @@
-# vscode-json-enhanced README
+# Json Enhanced
 
+[![Version](https://img.shields.io/visual-studio-marketplace/v/quanzaiyu.vscode-json-enhanced?style=flat-square&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=quanzaiyu.vscode-json-enhanced)
+![Installs](https://img.shields.io/visual-studio-marketplace/i/quanzaiyu.vscode-json-enhanced?style=flat-square)
+![Downloads](https://img.shields.io/visual-studio-marketplace/d/quanzaiyu.vscode-json-enhanced?style=flat-square)
+![Rating](https://img.shields.io/visual-studio-marketplace/r/quanzaiyu.vscode-json-enhanced?style=flat-square)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 <div align="center">
@@ -92,5 +96,5 @@ Description: Number of spaces to use for indentation of formatted JSON output. I
 - [json](https://marketplace.visualstudio.com/items?itemName=ZainChen.json)
 - [Fix JSON](https://marketplace.visualstudio.com/items?itemName=oliversturm.fix-json)
 - [vscode-json](https://marketplace.visualstudio.com/items?itemName=andyyaldoo.vscode-json)
-- [XML to JSON](https://marketplace.visualstudio.com/items?itemName=buianhthang.xml2json)
+- [XML to JSON](https://marketplace.visualstudio.com/items?itemName=quanzaiyu.vscode-json-enhanced)
 - [YAML ❤️ JSON](https://marketplace.visualstudio.com/items?itemName=hilleer.yaml-plus-json)
