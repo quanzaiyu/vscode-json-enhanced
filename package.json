@@ -3,7 +3,7 @@
   "displayName": "Json Enhanced",
   "description": "All json features and json tools in one",
   "publisher": "quanzaiyu",
-  "version": "1.0.9",
+  "version": "1.1.1",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.51.0"
@@ -112,6 +112,50 @@
         "enablement": "resourceExtname == .yml || resourceExtname == .yaml"
       }
     ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "vscode-json-enhanced.fixJSON",
+          "when": "resourceExtname == .json"
+        },
+        {
+          "command": "vscode-json-enhanced.validateJson",
+          "when": "resourceExtname == .json"
+        },
+        {
+          "command": "vscode-json-enhanced.uglifyJson",
+          "when": "resourceExtname == .json"
+        },
+        {
+          "command": "vscode-json-enhanced.beautifyJson",
+          "when": "resourceExtname == .json"
+        },
+        {
+          "command": "vscode-json-enhanced.escapeJson",
+          "when": "resourceExtname == .json"
+        },
+        {
+          "command": "vscode-json-enhanced.unescapeJson",
+          "when": "resourceExtname == .json"
+        },
+        {
+          "command": "vscode-json-enhanced.xml2json.document",
+          "when": "resourceExtname == .xml"
+        },
+        {
+          "command": "vscode-json-enhanced.xml2json.clipboard",
+          "when": "resourceExtname == .xml"
+        },
+        {
+          "command": "vscode-json-enhanced.json2yaml",
+          "when": "resourceExtname == .json"
+        },
+        {
+          "command": "vscode-json-enhanced.yaml2json",
+          "when": "resourceExtname == .yml || resourceExtname == .yaml"
+        }
+      ]
+    },
     "configuration": {
       "type": "object",
       "title": "JSON",
