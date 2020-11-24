@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.0.8
+
+- Add `JSON to YAML` command
+- Add `YAML to JSON` command
+
+![](./doc/images/009.gif)
+
 ## 1.0.6
 
 - Add `XML to JSON` command

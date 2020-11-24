@@ -3,7 +3,7 @@
   "displayName": "Json Enhanced",
   "description": "All json features and json tools in one",
   "publisher": "quanzaiyu",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.51.0"
@@ -36,7 +36,9 @@
     "onCommand:vscode-json-enhanced.uglifyJson",
     "onCommand:vscode-json-enhanced.beautifyJson",
     "onCommand:vscode-json-enhanced.xml2json.document",
-    "onCommand:vscode-json-enhanced.xml2json.clipboard"
+    "onCommand:vscode-json-enhanced.xml2json.clipboard",
+    "onCommand:vscode-json-enhanced.json2yaml",
+    "onCommand:vscode-json-enhanced.yaml2json"
   ],
   "main": "./dist/main.js",
   "contributes": {
@@ -45,55 +47,72 @@
         "command": "vscode-json-enhanced.fixJSON",
         "title": "Fix JSON",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .json"
+        "enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.validateJson",
         "title": "Validate JSON",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .json"
+        "enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.uglifyJson",
         "title": "Uglify JSON",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .json"
+        "enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.beautifyJson",
         "title": "Beautify JSON",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .json"
+        "enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.escapeJson",
         "title": "Escape JSON",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .json"
+        "enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.unescapeJson",
         "title": "Unescape JSON",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .json"
+        "enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.xml2json.document",
         "title": "XML to JSON",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .xml"
+        "enablement": "resourceExtname == .xml"
       },
       {
         "command": "vscode-json-enhanced.xml2json.clipboard",
         "title": "XML to JSON from clipboard",
         "category": "Json Enhanced",
-				"enablement": "resourceExtname == .xml"
+        "enablement": "resourceExtname == .xml"
+      },
+      {
+        "command": "vscode-json-enhanced.json2yaml",
+        "title": "JSON to YAML",
+        "category": "Json Enhanced",
+        "enablement": "resourceExtname == .json"
+      },
+      {
+        "command": "vscode-json-enhanced.yaml2json",
+        "title": "YAML to JSON",
+        "category": "Json Enhanced",
+        "enablement": "resourceExtname == .yml || resourceExtname == .yaml"
       }
     ],
     "configuration": {
       "type": "object",
       "title": "JSON",
       "properties": {
+        "vscode-json-enhanced.convertOnRename": {
+          "type": "boolean",
+          "description": "Convert YAML/JSON files on rename",
+          "default": true
+        },
         "vscode-json-enhanced.indentationSpaces": {
           "type": [
             "number",
@@ -143,6 +162,7 @@
     "clipboardy": "^2.3.0",
     "json-bigint": "^1.0.0",
     "jsonic": "^1.0.1",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.4.23",
+    "yaml": "^1.10.0"
   }
 }

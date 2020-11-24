@@ -6,6 +6,7 @@ import { validateJson } from './_validateJson';
 import { escapeJson } from './_escapeJson';
 import { unescapeJson } from './_unescapeJson';
 import { convertDocument, convertClipboard } from './_xmlToJson';
+import { onRightclickJson, onRightClickYaml } from './_jsonToYaml';
 
 module.exports = function (context: ExtensionContext) {
   const decoration = window.createTextEditorDecorationType({
@@ -21,7 +22,11 @@ module.exports = function (context: ExtensionContext) {
     commands.registerCommand("vscode-json-enhanced.validateJson", validateJson),
     commands.registerCommand("vscode-json-enhanced.escapeJson", escapeJson),
     commands.registerCommand("vscode-json-enhanced.unescapeJson", unescapeJson),
+    // xml2json
     commands.registerCommand("vscode-json-enhanced.xml2json.document", convertDocument),
     commands.registerCommand("vscode-json-enhanced.xml2json.clipboard", convertClipboard),
+    // yaml2json/json2yaml
+    commands.registerCommand("vscode-json-enhanced.json2yaml", onRightclickJson),
+    commands.registerCommand("vscode-json-enhanced.yaml2json", onRightClickYaml),
   );
 };

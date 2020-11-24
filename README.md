@@ -81,6 +81,13 @@
 
 ![](./doc/images/008.gif)
 
+### **JSON to YAML** / **YAML to JSON**
+
+- `JSON to YAML`
+- `YAML to JSON`
+
+![](./doc/images/009.gif)
+
 ## Shortcuts
 
 - Fix JSON: `Ctrl + Alt + F`
