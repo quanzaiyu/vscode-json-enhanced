@@ -3,7 +3,7 @@
   "displayName": "Json Enhanced",
   "description": "All json features and json tools in one",
   "publisher": "quanzaiyu",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.51.0"

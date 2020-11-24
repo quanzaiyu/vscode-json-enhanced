@@ -1,11 +1,15 @@
 let JSON = require("json-bigint");
 
+import * as YAML from 'yaml';
+
 import {
   Position,
   Range,
   TextEditor,
   Selection,
-  window
+  window,
+  Uri,
+  workspace
 } from "vscode";
 
 export class JsonUtils {
@@ -72,8 +76,34 @@ export class JsonUtils {
   }
 }
 
+export class YamlUtils {
+  // 将YAML转换为JSON
+  public static toJson(yaml: string): string {
+    try {
+      const json = YAML.parse(yaml, { });
+      return JSON.stringify(json, undefined, 2);
+    } catch (error) {
+      console.error(error);
+      throw new Error('Failed to parse JSON. Please make sure it has a valid format and try again.');
+    }
+  }
+
+  // 将JSON转换为YAML
+  public static fromJson(json: string): string {
+    const indent =
+      workspace.getConfiguration('vscode-json-enhanced').get<number>('indentationSpaces') ||
+      workspace.getConfiguration("editor").get<number>("tabSize");
+
+    try {
+      return YAML.stringify(JSON.parse(json), { indent });
+    } catch (error) {
+      throw new Error('Failed to parse YAML. Please make sure it has a valid format and try again.');
+    }
+  }
+}
+
 /**
- * This function is used to set the current document text
+ * 替换编辑器中的文本
  * @param newText
  */
 export const setText = (newText: string) => {
@@ -101,3 +131,31 @@ export const setText = (newText: string) => {
     editor.selection = new Selection(start, end);
   });
 };
+
+// 获取当前激活激活的编辑器文档的Uri
+export function getActiveTextEditorUri(): Uri {
+	const editor = window.activeTextEditor;
+	if (!editor) {
+		throw new Error('Failed to get active text editor');
+	}
+	return editor.document.uri;
+}
+
+// 展示错误信息
+export function showError(message?: string) {
+	const defaultMessage = 'Something went wrong, please validate your file and try again or create an issue if the problem persist';
+	if (!message) {
+		message = defaultMessage;
+	}
+	window.showErrorMessage(message);
+}
+
+// 重命名文件名并写入文件内容
+export async function changeFile(oldUri: Uri, newUri: Uri, newText: string) {
+	try {
+		await workspace.fs.writeFile(oldUri, Buffer.from(newText));
+		await workspace.fs.rename(oldUri, newUri);
+	} catch (error) {
+		showError(error.message);
+	}
+}

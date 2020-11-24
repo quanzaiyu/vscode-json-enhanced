@@ -1,14 +1,14 @@
-import { commands, ExtensionContext, window } from 'vscode';
+import { commands, ExtensionContext, window, workspace } from 'vscode';
 import { fix } from './_fixJSON';
 import { uglifyJson } from './_uglifyJson';
 import { beautifyJson } from './_beautifyJson';
 import { validateJson } from './_validateJson';
 import { escapeJson } from './_escapeJson';
 import { unescapeJson } from './_unescapeJson';
-import { convertDocument, convertClipboard } from './_xmlToJson';
-import { onRightclickJson, onRightClickYaml } from './_jsonToYaml';
+import { convertDocument, convertClipboard } from './_xmlConverter';
+import { json2Yaml, yaml2Json } from './_yamlConverter';
 
-module.exports = function (context: ExtensionContext) {
+module.exports = function (context: ExtensionContext): void {
   const decoration = window.createTextEditorDecorationType({
     color: 'pink',
     backgroundColor: 'green'
@@ -26,7 +26,7 @@ module.exports = function (context: ExtensionContext) {
     commands.registerCommand("vscode-json-enhanced.xml2json.document", convertDocument),
     commands.registerCommand("vscode-json-enhanced.xml2json.clipboard", convertClipboard),
     // yaml2json/json2yaml
-    commands.registerCommand("vscode-json-enhanced.json2yaml", onRightclickJson),
-    commands.registerCommand("vscode-json-enhanced.yaml2json", onRightClickYaml),
+    commands.registerCommand("vscode-json-enhanced.json2yaml", json2Yaml),
+    commands.registerCommand("vscode-json-enhanced.yaml2json", yaml2Json),
   );
 };
