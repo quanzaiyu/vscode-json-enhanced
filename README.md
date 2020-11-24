@@ -18,6 +18,8 @@
 - Escape JSON
 - Unescape JSON
 - Validate JSON
+- XML to JSON
+- XML to JSON from clipboard
 
 ## Supported languages
 
@@ -72,6 +74,13 @@
 
 ![](./doc/images/007.gif)
 
+### **XML to JSON**
+
+- `XML to JSON`
+- `XML to JSON from clipboard`
+
+![](./doc/images/008.gif)
+
 ## Shortcuts
 
 - Fix JSON: `Ctrl + Alt + F`
@@ -89,7 +98,7 @@ Description: Number of spaces to use for indentation of formatted JSON output. I
 ## Based On
 
 - [jsonic](https://github.com/rjrodger/jsonic)
-
+- [node-xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
 
 ## References
 

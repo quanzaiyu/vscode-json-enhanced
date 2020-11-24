@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.0.6
+
+- Add `XML to JSON` command
+- Add `XML to JSON from clipboard` command
+
+![](./doc/images/008.gif)
+
 ## 1.0.5
 
 - Add `Escape JSON` command

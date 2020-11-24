@@ -3,7 +3,7 @@
   "displayName": "Json Enhanced",
   "description": "All json features and json tools in one",
   "publisher": "quanzaiyu",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.51.0"
@@ -22,6 +22,8 @@
   ],
   "keywords": [
     "JSON",
+    "XML",
+    "YAML",
     "fix",
     "format"
   ],
@@ -42,42 +44,50 @@
       {
         "command": "vscode-json-enhanced.fixJSON",
         "title": "Fix JSON",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.validateJson",
         "title": "Validate JSON",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.uglifyJson",
         "title": "Uglify JSON",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.beautifyJson",
         "title": "Beautify JSON",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.escapeJson",
         "title": "Escape JSON",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.unescapeJson",
         "title": "Unescape JSON",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .json"
       },
       {
         "command": "vscode-json-enhanced.xml2json.document",
         "title": "XML to JSON",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .xml"
       },
       {
         "command": "vscode-json-enhanced.xml2json.clipboard",
         "title": "XML to JSON from clipboard",
-        "category": "Json Enhanced"
+        "category": "Json Enhanced",
+				"enablement": "resourceExtname == .xml"
       }
     ],
     "configuration": {
