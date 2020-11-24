@@ -20,6 +20,8 @@
 - Validate JSON
 - XML to JSON
 - XML to JSON from clipboard
+- JSON to YAML
+- YAML to JSON
 
 ## Supported languages
 
@@ -105,6 +107,7 @@ Description: Number of spaces to use for indentation of formatted JSON output. I
 ## Based On
 
 - [jsonic](https://github.com/rjrodger/jsonic)
+- [YAML](https://github.com/eemeli/yaml)
 - [node-xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
 
 ## References

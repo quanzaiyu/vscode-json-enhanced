@@ -5,7 +5,6 @@ import * as YAML from 'yaml';
 import {
   Position,
   Range,
-  TextEditor,
   Selection,
   window,
   Uri,
