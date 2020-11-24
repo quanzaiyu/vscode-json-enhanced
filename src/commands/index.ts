@@ -5,6 +5,7 @@ import { beautifyJson } from './_beautifyJson';
 import { validateJson } from './_validateJson';
 import { escapeJson } from './_escapeJson';
 import { unescapeJson } from './_unescapeJson';
+import { convertDocument, convertClipboard } from './_convertToJson';
 
 module.exports = function (context: ExtensionContext) {
   const decoration = window.createTextEditorDecorationType({
@@ -20,4 +21,7 @@ module.exports = function (context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand("vscode-json-enhanced.validateJson", validateJson));
   context.subscriptions.push(commands.registerCommand("vscode-json-enhanced.escapeJson", escapeJson));
   context.subscriptions.push(commands.registerCommand("vscode-json-enhanced.unescapeJson", unescapeJson));
+
+  context.subscriptions.push(commands.registerCommand("vscode-json-enhanced.xml2json.document", convertDocument));
+  context.subscriptions.push(commands.registerCommand("vscode-json-enhanced.xml2json.clipboard", convertClipboard));
 };

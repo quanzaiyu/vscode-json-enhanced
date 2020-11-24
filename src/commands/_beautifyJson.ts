@@ -38,6 +38,6 @@ export const beautifyJson = function () {
         "$1" + tabStyle.repeat(start.character)
       );
     }
-    setText(editor, beautifiedJson);
+    setText(beautifiedJson);
   }
 };

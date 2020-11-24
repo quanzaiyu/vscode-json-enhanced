@@ -19,6 +19,6 @@ export const escapeJson = function () {
   // Escape JSON
   let escapedJson = JsonUtils.escape(trimmedText);
   if (escapedJson !== trimmedText) {
-    setText(editor, escapedJson);
+    setText(escapedJson);
   }
 };

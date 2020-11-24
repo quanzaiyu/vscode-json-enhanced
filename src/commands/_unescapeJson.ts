@@ -20,6 +20,6 @@ export const unescapeJson = function () {
   let unescapedJson = JsonUtils.unescape(trimmedText);
 
   if (unescapedJson !== trimmedText) {
-    setText(editor, unescapedJson);
+    setText(unescapedJson);
   }
 };

@@ -4,7 +4,8 @@ import {
   Position,
   Range,
   TextEditor,
-  Selection
+  Selection,
+  window
 } from "vscode";
 
 export class JsonUtils {
@@ -75,7 +76,10 @@ export class JsonUtils {
  * This function is used to set the current document text
  * @param newText
  */
-export const setText = (editor: TextEditor, newText: string) => {
+export const setText = (newText: string) => {
+  const editor = window.activeTextEditor;
+  if (!editor) {return;}
+
   let doc = editor.document;
   editor.edit(builder => {
     let start, end;
