@@ -18,7 +18,5 @@ export const uglifyJson = function () {
 
   // Uglify JSON
   let uglifiedJson = JsonUtils.uglify(trimmedText);
-  if (uglifiedJson !== trimmedText) {
-    setText(uglifiedJson);
-  }
+  setText(uglifiedJson);
 };

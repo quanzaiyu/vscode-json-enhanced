@@ -1,5 +1,4 @@
-let JSON = require("json-bigint");
-
+// import * as JSON from 'json-bigint';
 import * as YAML from 'yaml';
 
 import {

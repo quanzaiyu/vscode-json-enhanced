@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.1.2
+
+- Use webpack to package source code
+
+## 1.1.0
+
+- Add commandPalette's `when` conditions
+
 ## 1.0.8
 
 - Add `JSON to YAML` command
